@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="shortcut icon" href="src/assets/index_logo.ico" type="image/x-icon">
+  <link rel="icon" href="src/assets/index_logo.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="og:site_name" content="Saint Seiya Sorter">
+  <meta name="og:description" content="Sort and rank your favorite characters from Saint Seiya.">
+  <meta name="og:image" content="https://cdn.discordapp.com/attachments/389799029703311360/459520053134622720/discord_logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saint Seiya Sorter</title>
+
+  <link rel="stylesheet" type="text/css" href="src/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+
+    <script src="src/js/data.js"></script>
+    <script src="src/js/data/2024-04-07.js"></script>
+
+  <script src="src/js/html2canvas.min.js"></script>
+  <script src="src/js/lz-string.min.js"></script>
+  <script src="src/js/seedrandom.min.js"></script>
+  <script src="src/js/dexie.min.js"></script>
+  <script src="src/js/main.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="tip-modal">
+        <div class="tip-content">
+            <p>Sample Text Here</p>
+            <div class="button">Close Tip</div>
+        </div>
+    </div>
+
+    <div class="progress">
+        <span class="progressbattle"></span>
+        <div class="progressbar">
+            <div class="progressfill"><span class="progresstext"></span></div>
+        </div>
+    </div>
+
+    <div class="sorter">
+        <div class="left sort padded-image">
+        <img src="https://i.imgur.com/4ejA4oc.png" class="left sort image">
+        </div>
+
+        <div class="starting start button">
+            <p>
+                Saint Seiya Character Ranker<br><br>Click to Start!
+            </p>
+        </div>
+        
+        <div class="starting load button">
+            <p>
+                Load <span></span>
+            </p>
+        </div>
+
+        <div class="loading button">
+            <div></div><span>Loading...</span>
+        </div>
+
+        <div class="sorting tie button"><p>Tie</p></div>
+        <div class="sorting undo button"><p>Undo</p></div>
+        <div class="sorting save button"><p>Save Progress</p></div>
+
+        <div class="finished save button"><p>Generate Result URL</p></div>
+        <div class="finished getimg button"><p>Generate Image</p></div>
+        <div class="finished list button"><p>Generate Text List</p></div>
+        
+        <div class="right sort padded-image">
+        <img src="https://i.imgur.com/4ejA4oc.png" class="right sort image">
+        </div>
+        
+        <div class="left sort text"><p></p></div>
+        <div class="right sort text"><p></p></div>
+    </div>
+
+    <div class="options"></div>
+    <div class="image selector">Display Images on Result: </div>
+    <div class="time taken"></div>
+    <div class="results"></div>
+
+    <div class="info">
+        <a href="">Discord</a> | 
+        <a href="https://github.com/Zanes/saintseiyasorter">Source Code</a> | 
+        <a href="https://github.com/execfera/charasort/">Original</a> | 
+        <a href="https://zanes.github.io/saintseiyasorter/?D4RgrGAMBsYBwGZzQEwtGALAucDs0cwkJkIpF5ZJIt5V9V1DNLtrFZj1PP9NlAQIZNO3PlzpjSdFjPm827dhOZN1a-lNmT+XQco379KyqZVS+IxjdO9JJiVsOsN2m0LZDBa3RZ323OrKxmah2oFilrLRdopWHAlOeq7MnMbu6THmojGe9q4BQfkeZnp5MnImWmm2ooUG1ZaV8c1Z2R31UR0+EdlZjnG6Zd1d-TV25goVdRXpwqlTQ0E9Qw6Fa-OzM2HAAIbEoMygnaedJ+xAA">My Ranking</a> | 
+        <a class="clearsave">Clear Save Data</a>
+        <br />
+        <a href="">I Like this Site; I want to say "Thanks!"</a>
+        <br />
+       
+        
+        <br><br>
+
+        <p>A shameless fork sorter specifically designed for Saint Seiya characters.</p>
+        <p><strong>Certain options have details that you can hover to read if you're on a laptop.</strong></p>
+        <p>Click on the character you like better from the two, or tie them if you like them equally or don't know them.</p>
+        <p>Unless you picked Agony Mode (WIP), in which case, you can't tie them; instead, you can do a coin flip (You will not be informed who won the coin flip).</p>
+        <p>Depending on how many sources you pick (especially under default settings), you'll get up to 700+ picks, so set aside a good few cups of tea and possibly your revolver for this.</p>
+
+        <br><br>
+
+        <p>Keyboard controls during sorting: H/LeftArrow (pick left) J/DownArrow (undo) K/UpArrow (tie) L/RightArrow (pick right) S (save progress).</p>
+        <p>Before sorting: S/Enter (start sorting) L (load progress).
+        <p>1/2/3 always correspond to the first/second/third buttons.</p>
+        
+        <br><br>
+
+        
+        <p> Testing Version</p>
+    </div>
+</div>
+</body>
+
+</html>

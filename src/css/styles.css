@@ -1,0 +1,440 @@
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: calc(16px + (26 - 16) * ((100vw - 50px) / (1600 - 50))); /*3.125vmin;*//* 16px; */
+  /*
+  text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  */
+}
+
+.tip-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.tip-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.emote {
+  width: 1.5em;
+  height: 1.5em;
+  object-fit: cover;
+  transform: translate(0%, 25%);
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  /*margin-top: 1em; */
+  background: linear-gradient(rgba(154, 185, 215, 0.563), rgba(79, 127, 199, 0.45), rgba(13, 79, 177, 0.681));
+}
+
+.progress {
+  margin: 1em auto;
+  width: calc(100% - 10px);
+  max-width: 500px;
+  display: none;
+}
+
+.progressbar {
+  position: relative;
+  width: calc(100% - 10px);
+  max-width: 492px;
+  border: 1px solid black;
+  padding: 3px;
+  margin: 2px 0px;
+}
+
+.progresstext {
+  position: absolute;
+  width: 90%;
+  max-width: 492px;
+  margin: 3px 0px;
+  text-align: center;
+  font-size: 0.7em;
+}
+
+.progressfill {
+  height: 20px;
+  background-color: lightgreen;
+  width: 0%;
+}
+
+.sorter {
+  /*margin: 0px auto; */
+  display: grid;
+  grid-template-columns: repeat(8, 12vw);
+  grid-template-rows: repeat(4, 12vw) 0.5vw 1.3em;
+  /*
+  grid-template-columns: 120px 1fr 120px;
+  */
+  /** grid-gap: 1px; *//*5px;*/
+  /*width: 95%;*//* old is 420px; */
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 5%;
+  text-align: center;
+  padding: 10%;
+  grid-column: 4 / 6;
+  cursor: pointer;
+  
+}
+
+.starting.start.button {
+  grid-row: span 4 / auto;
+  margin: 5%;
+  
+}
+
+.starting.load.button {
+  grid-row: span 2 / auto;
+  display: none;
+  font-size: calc(3px + (32 - 3) * (100vw - 100px) / (1600 - 100) );
+  margin: 5%;
+}
+
+.sorting.button, .finished.button {
+  grid-row: span 1;
+  display: none;
+  font-size: calc(3px + (32 - 3) * (100vw - 25px) / (1600 - 25) );
+  margin: 3%;
+  background-color: #6eb8edc6;
+}
+
+.starting.button > p, .sorting.button > p {
+  font-size: calc(3px + (32 - 3) * (100vw - 25px) / (1600 - 25) );
+}
+
+.finished.button > p {
+  font-size: calc(5px + (32 - 5) * (100vw - 25px) / (1600 - 25) );
+}
+
+.loading.button {
+  grid-row: span 4;
+  display: none;
+  font-size: calc(5px + (32 - 5) * (100vw - 25px) / (1600 - 25) );
+}
+
+.loading.button > div {
+  width: 25px;
+  height: 25px;
+  margin: 50px auto;
+  background-color: #333;
+
+  border-radius: 20px;  
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+/* Animation taken from: http://tobiasahlin.com/spinkit/ */
+
+.loading.button > span {
+  margin: auto auto 20%;
+  font-size: 0.7em;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+.sorter > .padded-image {
+  width: 100%;
+  height: 27vw;
+  /* max-width: 350px; */
+  overflow: hidden;
+  grid-row: 1 / 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  
+  object-fit: cover; /* Do not scale the image was contain */
+  object-position: center; /* Center the image within the element */
+  cursor: pointer;
+}
+
+.sorter > .padded-image > .image {
+  width: 100%;
+  max-width: inherit; /*Previously max-width: 350px;*/
+  margin: auto;
+  object-fit: contain; /* Do not scale the image was contain */
+  object-position: center; /* Center the image within the element */
+  cursor: pointer;
+}
+.sorter > .padded-image:hover{
+  border: 1px solid #FACC2F;
+  box-shadow: 0 0 20px #FACC2F;
+}
+
+.sorter > .text {
+  width: 100%;
+  /* max-width: 350px; */
+  margin: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  /*max-width: 240px;*/
+  /*
+  width: 120px;
+  height: 60px;
+  */
+  display: none;
+  grid-row: 4;
+  color: white;
+  background-color: #186daa;
+}
+
+.sorter > .text > p {
+  text-align: center;
+  font-size: calc(5px + (100vw - 25px) * (24 - 5) / (1600 - 25) ); /*font-size: 0.925em;*/
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.sorter > .left {
+  grid-column: 1 / 4;
+  border: 1px solid #000000;
+  border-radius: 5%;
+}
+
+.sorter > .right {
+  grid-column: 6 / 9;
+  border: 1px solid #000000;
+  border-radius: 5%;
+}
+
+.sorter > .save {
+  grid-row: span 2;
+}
+
+.options {
+  margin: 1em auto;
+  display: grid;
+  text-align: left;
+  grid-template-columns: repeat(3, 4fr);
+  grid-gap: 3vmin;
+  width: 95%;
+  max-width: 80vh; /*old 450px*/
+}
+
+.options > div {
+  font-size:  0.5em; /*Chrome somehow ignores 0.5625em; */
+  letter-spacing: -0.025vmin;
+  text-shadow: 0.075em 0.075em #b3d1ff;
+}
+
+label {
+  cursor: pointer;
+}
+
+label:hover {
+  color: #990000;
+}
+
+.options > .large.option, .options > hr {
+  grid-column: span 3;
+  text-align: center;
+  width: 100%;
+}
+
+.image.selector {
+  margin-top: 0.5em;
+  width: 500px;
+  display: none;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+.time.taken {
+  margin-top: 0.5em;
+  width: 80%;
+  display: none;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+.results {
+  font-size: 15px;
+  display: flex;
+  width: 90%;
+  margin: 1em auto;
+  flex: 1 1 20%;
+  justify-content: space-around;
+}
+
+@media all and (min-width: 1028px) {
+  .sorter {
+    margin-top: 1em;
+    grid-template-columns: repeat(8, 9vw);
+    grid-template-rows: repeat(4, 9vw) 0.5vw 1.3em;
+  }
+
+  .options > div {
+    font-size:  0.625em;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .results {
+    flex-flow: row wrap;
+    /*! max-height: calc(5 * (175px + 2px) + 1 * (15px + 2px)); */
+    /* 2px for borders */
+    /*! flex: 1; */
+  }
+}
+
+@media all and (max-width: 600px) {
+  .results {
+    flex-flow: row wrap;
+    flex: 1 1 33%;
+  }
+  /*
+  .button {
+    font-size: 0.925em;
+  }
+  */
+}
+
+
+@media all and (max-width: 400px) {
+  .button {
+    font-size: 0.125rem;
+    font-size: calc( 1px + (100vw - 10px) * (32 - 1) / (1600 - 10) );
+  }
+}
+
+
+.result {
+  display: grid;
+  width: 16em;
+  grid-template-columns: 1fr 5fr;
+  margin: 0.25em 0em;
+  min-width: 220px;
+  color: white;
+  background-color: rgba(49, 36, 118, 0.795);
+  border-radius: 0.5em;
+  padding: 0.025em 0.025em;
+  max-width: 20%;
+}
+
+.result.image.table-break {
+  break-after: always;
+  page-break-after: always;
+}
+
+.flex-break {
+  flex-basis: 100%;
+}
+
+.result > .right > div {
+  padding: 0.5em 0;
+}
+
+.result.image img {
+  width: inherit;
+  text-align: center;
+}
+
+.result.spacer {
+  height: 1px;
+  background-color: #000;
+}
+
+.result.head {
+  background-color: #000;
+  color: #FFF;
+  display: none;
+}
+
+.result > .left {
+  /*! width: 1.5em; */
+  padding: 0.2em 0.75em 0.2em 0.5em;
+  grid-column: 1 / 2;
+  text-align: right;
+}
+
+.result.image .left {
+  position: relative;
+}
+
+.result.image > .left span {
+  position: relative;
+  top: 50%;
+  right: 0.05em;
+  margin-top: -0.375em;
+}
+
+.result > .right {
+  padding: 0.05em 0em 0.05em 0em;
+  grid-column: 2 / 3;
+  /*! border-left: 1px solid #000; */
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: space-between;
+}
+
+.info {
+  margin: 2em auto 3em;
+  display: block;
+  text-align: center;
+  font-size: 0.6875em;
+  width: 80%;
+  line-height: 1.2em;
+}
+
+a {
+  color: #990000;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #FF6600;
+}
+
+a:visited {
+  color: #6600FF;
+}
