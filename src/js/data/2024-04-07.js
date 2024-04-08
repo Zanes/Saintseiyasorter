@@ -7,7 +7,7 @@
     dataSetVersion
 */
 /* eslint-disable no-global-assign */
-dataSetVersion = "2024-04-08" // Change this when creating a new data set version. YYYY-MM-DD format.
+dataSetVersion = "2024-04-07" // Change this when creating a new data set version. YYYY-MM-DD format.
 dataSet[dataSetVersion] = {}
 dataSet[dataSetVersion].options = [
   {
@@ -48,7 +48,7 @@ dataSet[dataSetVersion].options = [
 ]
 
 dataSet[dataSetVersion].characterData = [
-  // Golds OC
+  // GOLDS ORIGINAL
   {
     name: "Aries Mu",
     img: "https://i.imgur.com/kI6ReWI.jpg",
@@ -152,8 +152,501 @@ dataSet[dataSetVersion].characterData = [
       series: [ "sts" ],
       rank: ["gold"]
     }
-  }
+  },
 
+// GOLDS LOST CANVAS
+{
+  name: "Aries Shion",
+  img: "https://i.imgur.com/clK030U.jpg",
+  opts: {
+    series: [ "tlc, nd" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Taurus Hasgard",
+  img: "https://i.imgur.com/tQfqAoT.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Taurus Teneo",
+  img: "https://i.imgur.com/rNlKK1x.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Gemini Aspros",
+  img: "https://i.imgur.com/NfS5g2o.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Gemini Defteros",
+  img: "https://i.imgur.com/xnpxXuK.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Cancer Sage",
+  img: "https://i.imgur.com/nKTlMcz.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Cancer Manigoldo",
+  img: "https://i.imgur.com/Fe4YGUF.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Leo Ilias",
+  img: "https://i.imgur.com/yOTW1MB.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Leo Regulus",
+  img: "https://i.imgur.com/WdxPoZe.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Virgo Asmita",
+  img: "https://i.imgur.com/32aiLh3.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Scorpio Kardia",
+  img: "https://i.imgur.com/V3IhKUO.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Sagittarius Sisyphus",
+  img: "https://i.imgur.com/CBLFMtc.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Capricorn El Cid",
+  img: "https://i.imgur.com/BbNQJAZ.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Aquarius Degel",
+  img: "https://i.imgur.com/JFL7yDw.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Pisces Albafica",
+  img: "https://i.imgur.com/2PMIJAp.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["gold"]
+  }
+},
+// GOLDS LOST CANVAS GAIDEN
+{
+  name: "Scorpio Zaphiri",
+  img: "https://i.imgur.com/zUEeuoo.jpg",
+  opts: {
+    series: [ "tlcg" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Aquarius Krest",
+  img: "https://i.imgur.com/M00R7NO.jpg",
+  opts: {
+    series: [ "tlcg" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Pisces Lugonis",
+  img: "https://i.imgur.com/0AzwFO9.jpg",
+  opts: {
+    series: [ "tlcg" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Libra Itia",
+  img: "https://i.imgur.com/wdtnTv9.jpg",
+  opts: {
+    series: [ "tlcg" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Aries Gateguard",
+  img: "https://i.imgur.com/kJsf3oq.jpg",
+  opts: {
+    series: [ "tlcg" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Aries Avenir",
+  img: "https://i.imgur.com/gpBokCT.jpg",
+  opts: {
+    series: [ "tlcg" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Taurus Francisca",
+  img: "https://i.imgur.com/nOfpkKt.jpg",
+  opts: {
+    series: [ "tlcg" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Sagittarius Aeras",
+  img: "https://i.imgur.com/rH5oFhp.jpg",
+  opts: {
+    series: [ "tlcg" ],
+    rank: ["gold"]
+  }
+},
+// GOLDS NEXT DIMENSION
+{
+  name: "Taurus Ox",
+  img: "https://i.imgur.com/DRtLxlE.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Gemini Cain",
+  img: "https://i.imgur.com/dGx2tAu.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Gemini Abel",
+  img: "https://i.imgur.com/iX1IY9Y.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Cancer Deathtoll",
+  img: "https://i.imgur.com/JbQ7KMk.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Leo Kaiser",
+  img: "https://i.imgur.com/XDFUD9Q.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Virgo Shijima",
+  img: "https://i.imgur.com/azxvE45.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Scorpio Écarlate",
+  img: "https://i.imgur.com/7jVRlLX.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Ophiucus Odysseus",
+  img: "https://i.imgur.com/ISjrtur.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Sagittarius Gestalt",
+  img: "https://i.imgur.com/I1I76FF.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Capricorn Izo",
+  img: "https://i.imgur.com/iFe2Rvi.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Aquarius Mystoria",
+  img: "https://i.imgur.com/6HGCTra.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Pisces Cardinale",
+  img: "https://i.imgur.com/pwyCN6o.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Ophiucus Asklepios",
+  img: "https://i.imgur.com/Qgr3zU1.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["gold"]
+  }
+},
+// GOLDS OMEGA
+{
+  name: "Aries Kiki",
+  img: "https://i.imgur.com/vFSFz56.jpg",
+  opts: {
+    series: [ "omega" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Taurus Harbinger",
+  img: "https://i.imgur.com/FTxYaeS.jpg",
+  opts: {
+    series: [ "omega" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Gemini Paradox",
+  img: "https://i.imgur.com/IEMesG4.jpg",
+  opts: {
+    series: [ "omega" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Gemini Integra",
+  img: "https://i.imgur.com/WWV45i4.jpg",
+  opts: {
+    series: [ "omega" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Cancer Schiller",
+  img: "https://i.imgur.com/PQoq77F.jpg",
+  opts: {
+    series: [ "omega" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Leo Mycenae",
+  img: "https://i.imgur.com/VvOJ2IC.jpg",
+  opts: {
+    series: [ "omega" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Virgo Fudou",
+  img: "https://i.imgur.com/Xe7Y0rK.jpg",
+  opts: {
+    series: [ "omega" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Libra Genbu",
+  img: "https://i.imgur.com/KnAs7LD.jpg",
+  opts: {
+    series: [ "omega" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Scorpio Sonia",
+  img: "https://i.imgur.com/S5Ro8So.jpg",
+  opts: {
+    series: [ "omega" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Capricorn Ionia",
+  img: "https://i.imgur.com/UbiItoI.jpg",
+  opts: {
+    series: [ "omega" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Aquarius Tokisada",
+  img: "https://i.imgur.com/dC8Mmt0.jpg",
+  opts: {
+    series: [ "omega" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Pisces Amor",
+  img: "https://i.imgur.com/1MxNHT9.jpg",
+  opts: {
+    series: [ "omega" ],
+    rank: ["gold"]
+  }
+},
+// GOLDS DARK WING
+{
+  name: "Aries Theseus",
+  img: "https://i.imgur.com/N2vmcIv.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Taurus Ain",
+  img: "https://i.imgur.com/TEX5KES.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Gemini Sojirou",
+  img: "https://i.imgur.com/ZuAvQwI.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Cancer Crematorio",
+  img: "https://i.imgur.com/xnaD7gx.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Leo Vassilios",
+  img: "https://i.imgur.com/QqCFwc5.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Virgo Renge",
+  img: "https://i.imgur.com/RYa1Eg2.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Libra Kogetsuki",
+  img: "https://i.imgur.com/p6taCNo.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Scorpio Eulalia",
+  img: "https://i.imgur.com/iKYmKsk.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Sagittarius Aiolos (DW)",
+  img: "https://i.imgur.com/a3hjQmn.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Capricorn Eito",
+  img: "https://i.imgur.com/7O5KAl7.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Aquarius Tristan",
+  img: "https://i.imgur.com/gQVYZqK.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Pisces Alfried",
+  img: "https://i.imgur.com/sZGGd6F.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["gold"]
+  }
+},
+{
+  name: "Aries Theseus",
+  img: "https://i.imgur.com/N2vmcIv.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["gold"]
+  }
+}
   //
   // END
   //
