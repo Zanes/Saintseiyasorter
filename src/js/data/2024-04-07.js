@@ -17,8 +17,8 @@ dataSet[dataSetVersion].options = [
     checked: true,
     sub: [
       { name: "Original", tooltip: "Basically everything originated from the classic manga by Masami Kurumada", key: "sts" },
-      { name: "Lost Canvas", tooltip: "Only New Characters introduced in the series by Shiori Teshirogi", key: "tlc" },
-      { name: "Lost Canvas Gaiden", tooltip: "New Characters introduced in Lost Canvas Gaiden", key: "tlcg" },
+      { name: "LostCanvas", tooltip: "Only New Characters introduced in the series by Shiori Teshirogi", key: "tlc" },
+      { name: "LostCanvas Gaiden", tooltip: "New Characters introduced in Lost Canvas Gaiden", key: "tlcg" },
       { name: "Next Dimension", tooltip: "For New Characters introduced in the official sequel by Masami Kurumada", key: "nd" },
       { name: "Omega", tooltip: "New Characters introduced in the (mostly) anime only Saint Seiya Omega", key: "omega" },
       { name: "Saintia Sho", tooltip: "New Characters from this series by Chimaki Kuori", key: "sho" },
@@ -27,15 +27,17 @@ dataSet[dataSetVersion].options = [
     ]
   },
   {
-    name: "Filter by Rank",
+    name: "Filter by Rank/Army",
     key: "rank",
     tooltip: "Check this to restrict characters that appear.",
     checked: true,
     sub: [
       { name: "Gold Saints", key: "gold" },
-      { name: "Soon.tm", tooltip: "aka datamined", key: "soon" },
-      { name: "Never.tm", key: "never" },
-      { name: "Marinas", key: "marina" }
+      { name: "Silver Saints", key: "silver" },
+      { name: "Bronze Saints", key: "bronze" },
+      { name: "Marinas", key: "marina" },
+      { name: "God Warriors", key: "gw"},
+      { name: "Specters", key: "hades"}
     ]
   },
   {
@@ -646,7 +648,403 @@ dataSet[dataSetVersion].characterData = [
     series: [ "dw" ],
     rank: ["gold"]
   }
-}
+},
+// GOD WARRIORS
+{
+  name: "Dubhe Siegfried",
+  img: "https://i.imgur.com/UwEwIIv.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Merak Hagen",
+  img: "https://i.imgur.com/YNE0Cbz.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Phecda Thor",
+  img: "https://i.imgur.com/97C3jNb.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Megrez Alberich",
+  img: "https://i.imgur.com/FJV8pEz.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Alioth Fenrir",
+  img: "https://i.imgur.com/K1C8IuA.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Mizar Syd",
+  img: "https://i.imgur.com/kvverr2.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Alcor Bud",
+  img: "https://i.imgur.com/3cmEBH1.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Benetnasch Mime",
+  img: "https://i.imgur.com/rHI6LLF.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["gw"]
+  }
+},
+// GOD WARRIORS SOUL OF GOLD
+{
+  name: "Gullinbursti Frodi",
+  img: "https://i.imgur.com/etHP4P0.jpg",
+  opts: {
+    series: [ "sog" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Nidhogg Fafner",
+  img: "https://i.imgur.com/B9WsMaE.jpg",
+  opts: {
+    series: [ "sog" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Tanngrisnir Heracles",
+  img: "https://i.imgur.com/R8TcMAi.jpg",
+  opts: {
+    series: [ "sog" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Eikschnir Surt",
+  img: "https://i.imgur.com/LYQAJAg.jpg",
+  opts: {
+    series: [ "sog" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Granir Sigmund",
+  img: "https://i.imgur.com/9cqwXGf.jpg",
+  opts: {
+    series: [ "sog" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Hraesvelgr Balder",
+  img: "https://i.imgur.com/fK0atK5.jpg",
+  opts: {
+    series: [ "sog" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Garm Ultgardar",
+  img: "https://i.imgur.com/5pK05fu.jpg",
+  opts: {
+    series: [ "sog" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Andreas Rize",
+  img: "https://i.imgur.com/xGf1z9F.jpg",
+  opts: {
+    series: [ "sog" ],
+    rank: ["gw"]
+  }
+},
+{
+  name: "Loki",
+  img: "https://i.imgur.com/9JzZIMS.jpg",
+  opts: {
+    series: [ "sog" ],
+    rank: ["gw"]
+  }
+},
+// MARINAS
+{
+  name: "Mermaid Thetis",
+  img: "https://i.imgur.com/atibahI.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["marina"]
+  }
+},
+{
+  name: "Chrysaor Krishna",
+  img: "https://i.imgur.com/1vQfIGW.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["marina"]
+  }
+},
+{
+  name: "Kraken Isaak",
+  img: "https://i.imgur.com/VbZe3an.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["marina"]
+  }
+},
+{
+  name: "Limnades Caça",
+  img: "https://i.imgur.com/dF3CIsp.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["marina"]
+  }
+},
+{
+  name: "Scylla Io",
+  img: "https://i.imgur.com/UIlj40f.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["marina"]
+  }
+},
+{
+  name: "Sea Horse Baian",
+  img: "https://i.imgur.com/j0y4nov.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["marina"]
+  }
+},
+{
+  name: "Siren Sorento",
+  img: "https://i.imgur.com/gsNm0ey.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["marina"]
+  }
+},
+// SPECTERS
+{
+  name: "Acheron Charon",
+  img: "https://i.imgur.com/ANdKKOe.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Garuda Aiacos",
+  img: "https://i.imgur.com/fRO2ibc.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Wyvern Rhadamanthys",
+  img: "https://i.imgur.com/kRDQ2ye.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Balrog Lune",
+  img: "https://i.imgur.com/YJ4w4GM.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Griffon Minos",
+  img: "https://i.imgur.com/KhUd0SO.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Basilisk Sylpheed",
+  img: "https://i.imgur.com/y7vT7sg.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Lykaon Phlegyas",
+  img: "https://i.imgur.com/6uL2kpd.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Troll Ivan",
+  img: "https://i.imgur.com/vWV60JV.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Minotauros Gordon",
+  img: "https://i.imgur.com/7aCFjxx.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Harpy Valentine",
+  img: "https://i.imgur.com/dwxIx2w.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Frog Zelos",
+  img: "https://i.imgur.com/rFpZUBG.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Deep Niobe",
+  img: "https://i.imgur.com/mloW6Ku.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Sphynx Pharaoh",
+  img: "https://i.imgur.com/ER1qkv0.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Cyclops Giganto",
+  img: "https://i.imgur.com/lIhUITR.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Gorgon Ochs",
+  img: "https://i.imgur.com/KtW3mOH.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Alraune Queen",
+  img: "https://i.imgur.com/sS5qAC4.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Papylon Myu",
+  img: "https://i.imgur.com/WwY5YCp.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Worm Raimi",
+  img: "https://i.imgur.com/d7TLCr2.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Golem Rock",
+  img: "https://i.imgur.com/cqTR3oe.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Deadly Beetle Stand",
+  img: "https://i.imgur.com/yhEjx66.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Dullahan Cube",
+  img: "https://i.imgur.com/yMRDtjQ.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Elf Mills",
+  img: "https://i.imgur.com/x0l4H7N.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Hypnos",
+  img: "https://i.imgur.com/IaX4gda.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Thanatos",
+  img: "https://i.imgur.com/Rojdk4o.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Ker",
+  img: "https://i.imgur.com/CsHgG7U.jpg",
+  opts: {
+    series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
   //
   // END
   //
