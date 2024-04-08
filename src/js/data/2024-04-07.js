@@ -849,7 +849,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Acheron Charon",
   img: "https://i.imgur.com/ANdKKOe.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -873,7 +873,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Balrog Lune",
   img: "https://i.imgur.com/YJ4w4GM.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -889,7 +889,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Basilisk Sylpheed",
   img: "https://i.imgur.com/y7vT7sg.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -897,7 +897,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Lykaon Phlegyas",
   img: "https://i.imgur.com/6uL2kpd.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -913,7 +913,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Minotauros Gordon",
   img: "https://i.imgur.com/7aCFjxx.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -921,7 +921,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Harpy Valentine",
   img: "https://i.imgur.com/dwxIx2w.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -929,7 +929,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Frog Zelos",
   img: "https://i.imgur.com/rFpZUBG.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -937,7 +937,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Deep Niobe",
   img: "https://i.imgur.com/mloW6Ku.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -945,7 +945,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Sphynx Pharaoh",
   img: "https://i.imgur.com/ER1qkv0.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -953,7 +953,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Cyclops Giganto",
   img: "https://i.imgur.com/lIhUITR.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -969,7 +969,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Alraune Queen",
   img: "https://i.imgur.com/sS5qAC4.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -985,7 +985,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Worm Raimi",
   img: "https://i.imgur.com/d7TLCr2.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -1001,7 +1001,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Deadly Beetle Stand",
   img: "https://i.imgur.com/yhEjx66.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -1025,7 +1025,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Hypnos",
   img: "https://i.imgur.com/IaX4gda.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -1033,7 +1033,7 @@ dataSet[dataSetVersion].characterData = [
   name: "Thanatos",
   img: "https://i.imgur.com/Rojdk4o.jpg",
   opts: {
-    series: [ "sts" ],
+    series: [ "sts", "tlc" ],
     rank: ["hades"]
   }
 },
@@ -1042,6 +1042,329 @@ dataSet[dataSetVersion].characterData = [
   img: "https://i.imgur.com/CsHgG7U.jpg",
   opts: {
     series: [ "sts" ],
+    rank: ["hades"]
+  }
+},
+// SPECTERS LOST CANVAS
+{
+  name: "Mephistopheles Yoma",
+  img: "https://i.imgur.com/tjFX2Qs.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Garuda Aiacos (TLC)",
+  img: "https://i.imgur.com/6Y8CJoH.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Wyvern Rhadamanthys (TLC)",
+  img: "https://i.imgur.com/NUpSmPv.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Griffon Minos (TLC)",
+  img: "https://i.imgur.com/1Nvnmr7.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Behemoth Violate",
+  img: "https://i.imgur.com/OVyS2kJ.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Mandrake Fyodor",
+  img: "https://i.imgur.com/TMinluB.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Dryad Luco",
+  img: "https://i.imgur.com/nHQnnHU.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Nasu Veronica",
+  img: "https://i.imgur.com/eajqvRj.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Gembu Gregor",
+  img: "https://i.imgur.com/zaz74iE.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Vampire Earhart",
+  img: "https://i.imgur.com/bWjznsd.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Cetus Chris",
+  img: "https://i.imgur.com/mQxb2JQ.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Bennu Kagaho",
+  img: "https://i.imgur.com/7KOQmRW.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Hanuman Tokusa",
+  img: "https://i.imgur.com/r1WBwQJ.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Atavaka",
+  img: "https://i.imgur.com/QsQvUZ6.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Upyr Leibold",
+  img: "https://i.imgur.com/3ZS3nPg.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Necromancer Byaku",
+  img: "https://i.imgur.com/fv5UTxJ.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Dawon Erythro",
+  img: "https://i.imgur.com/VipDVXc.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Caith Sith Cheshire",
+  img: "https://i.imgur.com/UDDo5D8.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Silfo Edward",
+  img: "https://i.imgur.com/WhDY53X.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Kageboshi",
+  img: "https://i.imgur.com/8dgWeEA.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Bat Wimber",
+  img: "https://i.imgur.com/q5JQxnY.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Oneiros",
+  img: "https://i.imgur.com/swBqFPx.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Ikelos",
+  img: "https://i.imgur.com/x1kV8Iu.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Phantasos",
+  img: "https://i.imgur.com/CIGVduT.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Morpheus",
+  img: "https://i.imgur.com/6CFnM1b.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Phobetor",
+  img: "https://i.imgur.com/i64mBxF.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Owl Partita",
+  img: "https://i.imgur.com/STJW1JY.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Dullahan Cube (TLC)",
+  img: "https://i.imgur.com/zUSsU8B.jpg",
+  opts: {
+    series: [ "tlc" ],
+    rank: ["hades"]
+  }
+},
+// SPECTERS NEXT DIMENSION
+{
+  name: "Acheron Nyan",
+  img: "https://i.imgur.com/ynxWC5h.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Garuda Suikyo",
+  img: "https://i.imgur.com/MHp0CKN.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Wyvern Chagall",
+  img: "https://i.imgur.com/jXImNhX.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Griffon Veemer",
+  img: "https://i.imgur.com/PUD1w1S.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Frog Mi-Yan",
+  img: "https://i.imgur.com/Wrw8bun.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Papillon Giulietta",
+  img: "https://i.imgur.com/QhT8oWX.jpg",
+  opts: {
+    series: [ "nd" ],
+    rank: ["hades"]
+  }
+},
+// SPECTERS DARK WING
+{
+  name: "Garuda Matsuri",
+  img: "https://i.imgur.com/vrJSvnN.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Wyvern Shoichiro",
+  img: "https://i.imgur.com/2qQ2zlz.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Harpy Zhu",
+  img: "https://i.imgur.com/bFGLUH2.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Necromancer Charlotte",
+  img: "https://i.imgur.com/GasHj3z.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Sphynx Esther",
+  img: "https://i.imgur.com/P4n4bUb.jpg",
+  opts: {
+    series: [ "dw" ],
+    rank: ["hades"]
+  }
+},
+{
+  name: "Laelaps Suzuri",
+  img: "https://i.imgur.com/FWHZjEP.jpg",
+  opts: {
+    series: [ "dw" ],
     rank: ["hades"]
   }
 },
