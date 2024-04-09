@@ -44,6 +44,12 @@ body {
   align-items: center;
   /*margin-top: 1em; */
   background: linear-gradient(rgba(154, 185, 215, 0.563), rgba(79, 127, 199, 0.45), rgba(13, 79, 177, 0.681));
+  background-image: url(https://wallpapercrafter.com/desktop1/562774-Anime-Saint-Seiya-Andromeda-Shun-Aquarius-Camus.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-color:rgba(226, 226, 255, 0.9);
+  background-blend-mode: lighten;
 }
 
 .progress {
