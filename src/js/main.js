@@ -17,7 +17,7 @@ let timestamp = 0;        // savedata[0]      (Unix time when sorter was started
 let timeTaken = 0;        // savedata[1]      (Number of ms elapsed when sorter ends, used as end-of-sort flag and in filename generation)
 let choices   = '';       // savedata[2]      (String of '0', '1' and '2' that records what sorter choices are made)
 let optStr    = '';       // savedata[3]      (String of '0' and '1' that denotes top-level option selection)
-let agonyMode = true;     // savedata[4]      (Enables Agony Mode. This changes the function of 'Tie' into 'Coin Flip' and 'Undo' into 'Redo All')
+let agonyMode = false;     // savedata[4]      (Enables Agony Mode. This changes the function of 'Tie' into 'Coin Flip' and 'Undo' into 'Redo All')
 let coinFlips = 0;        // savedata[5]      (Only applicable in Agony Mode. Counts the number of coin flips that you did.)         
 let suboptStr = '';       // savedata[6...n]  (String of '0' and '1' that denotes nested option selection, separated by '|')
 let timeError = false;    // Shifts entire savedata array to the right by 1 and adds an empty element at savedata[0] if true.
@@ -186,7 +186,7 @@ function start() {
   /** If Agony Mode is enabled, appropriately rename the icons */
   if (agonyMode) {
     document.querySelector('.sorting.tie.button').innerHTML = 'Flip a Coin';
-    document.querySelector('.sorting.undo.button').innerHTML = `Can't Choose! <img class="emote" src="https://cdn.discordapp.com/emojis/430164560888987648.png" />`;
+    document.querySelector('.sorting.undo.button').innerHTML = `Can't Choose! <img class="emote" src="https://i.imgur.com/CYgXX68.png" />`;
   } else {
     document.querySelector('.sorting.tie.button').innerHTML = 'Tie';
     document.querySelector('.sorting.undo.button').innerHTML = 'Undo';
