@@ -179,7 +179,7 @@ body {
 
 .sorter > .padded-image {
   width: 100%;
-  height: 27vw;
+  height: 74%;
   /* max-width: 350px; */
   overflow: hidden;
   grid-row: 1 / 5;
