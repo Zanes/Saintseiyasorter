@@ -19,7 +19,8 @@ let choices   = '';       // savedata[2]      (String of '0', '1' and '2' that r
 let optStr    = '';       // savedata[3]      (String of '0' and '1' that denotes top-level option selection)
 let agonyMode = false;     // savedata[4]      (Enables Agony Mode. This changes the function of 'Tie' into 'Coin Flip' and 'Undo' into 'Redo All')
 let coinFlips = 0;        // savedata[5]      (Only applicable in Agony Mode. Counts the number of coin flips that you did.)         
-let suboptStr = '';       // savedata[6...n]  (String of '0' and '1' that denotes nested option selection, separated by '|')
+let skipped = [];         // savedata[6]      (Array of characterDataToSort indexes that were marked as skipped)
+let suboptStr = '';       // savedata[7...n]  (String of '0' and '1' that denotes nested option selection, separated by '|')
 let timeError = false;    // Shifts entire savedata array to the right by 1 and adds an empty element at savedata[0] if true.
 
 /** Intermediate sorter data. */
@@ -777,7 +778,7 @@ function generateTextList() {
 }
 
 function generateSavedata() {
-  const saveData = `${timeError?'|':''}${timestamp}|${timeTaken}|${choices}|${agonyMode?'a':'b'}|${coinFlips}|${optStr}${suboptStr}`;
+  const saveData = `${timeError?'|':''}${timestamp}|${timeTaken}|${choices}|${agonyMode?'a':'b'}|${coinFlips}|${skipped.join(',')}|${optStr}${suboptStr}`;
   return LZString.compressToEncodedURIComponent(saveData);
 }
 
@@ -891,6 +892,8 @@ function decodeQuery(queryString = window.location.search.slice(1)) {
     if (agonyString != 'a') agonyMode = false;
 
     coinFlips = Number(decoded.splice(0, 1)[0]);
+
+    skipped = decoded.splice(0, 1)[0].split(',').map((elem) => Number(elem));
 
     const optDecoded    = decoded.splice(0, 1)[0];
     const suboptDecoded = decoded.slice(0);
