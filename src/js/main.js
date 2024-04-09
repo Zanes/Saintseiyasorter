@@ -115,13 +115,13 @@ function init() {
   tipCloseButton.addEventListener('click', hideTips);
 
   /** Define keyboard controls (up/down/left/right vimlike k/j/h/l). */
-  document.addEventListener('keypress', (ev) => {
+  document.addEventListener('keydown', (ev) => {
     /** If sorting is in progress. */
     if (timestamp && !timeTaken && !loading && choices.length === battleNo - 1) {
       switch(ev.key) {
         case 's': case '3':                   saveProgress('Progress'); break;
-        case 'h': case 'ArrowLeft':           pick('left'); break;
-        case 'l': case 'ArrowRight':          pick('right'); break;
+        case 'ArrowLeft': case 'h':           pick('left'); break;
+        case 'ArrowRight': case 'l':          pick('right'); break;
         case 'k': case '1': case 'ArrowUp':   if (agonyMode) pick('coinflip'); else pick('tie'); break;
         case 'j': case '2': case 'ArrowDown': if (agonyMode) displayTips(); else undo(); break;
         default: break;
