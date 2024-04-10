@@ -37,6 +37,8 @@ let battleNo        = 1;
 let sortedNo        = 0;
 let pointer         = 0;
 
+let lastSkipped     = false;
+
 /** A copy of intermediate sorter data is recorded for undo() purposes. */
 let sortedIndexListPrev = [];
 let recordDataListPrev  = [];
@@ -418,7 +420,7 @@ function display() {
 /**
  * Sort between two character choices or tie.
  * 
- * @param {'left'|'right'|'tie'|'coinflip'} sortType
+ * @param {'left'|'right'|'skipleft'|'skipright'|'tie'|'coinflip'} sortType
  */
 function pick(sortType) {
   if ((timeTaken && choices.length === battleNo - 1) || loading) { return; }
@@ -436,6 +438,29 @@ function pick(sortType) {
   battleNoPrev        = battleNo;
   sortedNoPrev        = sortedNo;
   pointerPrev         = pointer;
+
+  /** 
+   * For picking 'skipleft' or 'skipright':
+   * 
+   * Add selected character to skipped list. Mark previous
+   * round as having skipped a character. And also picks
+   * the opposite character.
+   */
+  switch (sortType) {
+    case 'skipleft': {
+      skipped.push(sortedIndexList[leftIndex][leftInnerIndex]);
+      lastSkipped = true;
+      sortType = 'right';
+      break;
+    }
+    case 'skipright': {
+      skipped.push(sortedIndexList[rightIndex][rightInnerIndex]);
+      lastSkipped = true;
+      sortType = 'left';
+      break;
+    }
+    default: lastSkipped = false;
+  }
 
   /**
    * For picking 'coinflip'
@@ -692,6 +717,11 @@ function undo() {
   battleNo        = battleNoPrev;
   sortedNo        = sortedNoPrev;
   pointer         = pointerPrev;
+
+  if (lastSkipped) {
+    skipped.pop();
+    lastSkipped = false;
+  }
 
   display();
 }
