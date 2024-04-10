@@ -99,6 +99,9 @@ function init() {
   document.querySelector('.left.sort.image').addEventListener('click', () => pick('left'));
   document.querySelector('.right.sort.image').addEventListener('click', () => pick('right'));
   
+  document.querySelector('.left.sort.skip').addEventListener('click', () => pick('skipleft'));
+  document.querySelector('.right.sort.skip').addEventListener('click', () => pick('skipright'));
+  
   document.querySelector('.sorting.tie.button').addEventListener('click', () => {if (agonyMode) pick('coinflip'); else pick('tie');});
   document.querySelector('.sorting.undo.button').addEventListener('click', () =>{ if (agonyMode) displayTips(); else undo(); });
   document.querySelector('.sorting.save.button').addEventListener('click', () => saveProgress('Progress'));
