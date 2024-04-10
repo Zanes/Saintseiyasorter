@@ -401,6 +401,10 @@ function display() {
       case 2: pick('tie'); break;
       default: break;
     }
+  } else if (skipped.includes(leftCharIndex)) {
+    pick('right');
+  } else if (skipped.includes(rightCharIndex)) {
+    pick('left');
   } else { // Continue displaying in full
     progressBar(`Battle No. ${battleNo}`, percent);
 
@@ -632,6 +636,7 @@ function result(imageNum = 5) {
   timeElem.innerHTML = timeStr;
 
   characterDataToSort.forEach((val, idx) => {
+    if (skipped.includes(idx)) return;
     const characterIndex = finalSortedIndexes[idx];
     const character = characterDataToSort[characterIndex];
     if (imageDisplay-- > 0) {
