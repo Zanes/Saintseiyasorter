@@ -215,7 +215,7 @@ body {
   z-index: 1;
   align-self: start;
   background: rgba(255, 255, 255, 0.75);
-  padding: 0.75em;
+  padding: 0.50em;
   cursor: pointer;
 }
 
