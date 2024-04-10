@@ -664,8 +664,8 @@ function result(imageNum = 5) {
   timeElem.innerHTML = timeStr;
 
   characterDataToSort.forEach((val, idx) => {
-    if (skipped.includes(idx)) return;
     const characterIndex = finalSortedIndexes[idx];
+    if (skipped.includes(characterIndex)) return;
     const character = characterDataToSort[characterIndex];
     if (imageDisplay-- > 0) {
       resultTable.insertAdjacentHTML('beforeend', imgRes(character, rankNum, imageDisplay == 0));
