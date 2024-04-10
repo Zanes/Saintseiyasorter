@@ -184,9 +184,9 @@ body {
   overflow: hidden;
   grid-row: 1 / 5;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 
   margin-left: auto;
   margin-right: auto;
@@ -203,10 +203,34 @@ body {
   object-fit: contain; /* Do not scale the image was contain */
   object-position: center; /* Center the image within the element */
   cursor: pointer;
+  grid-area: 1 / 1;
 }
 .sorter > .padded-image:hover{
   border: 1px solid #FACC2F;
   box-shadow: 0 0 20px #FACC2F;
+}
+
+.sorter > .padded-image > .skip {
+  grid-area: 1 / 1;
+  z-index: 1;
+  align-self: start;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 0.75em;
+  cursor: pointer;
+}
+
+.sorter > .padded-image > .skip:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.sorter > .padded-image > .skip.left {
+  justify-self: end;
+  border-bottom-left-radius: 1em;
+}
+
+.sorter > .padded-image > .skip.right {
+  justify-self: start;
+  border-bottom-right-radius: 1em;
 }
 
 .sorter > .text {

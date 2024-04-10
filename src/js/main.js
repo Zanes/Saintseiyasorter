@@ -19,7 +19,8 @@ let choices   = '';       // savedata[2]      (String of '0', '1' and '2' that r
 let optStr    = '';       // savedata[3]      (String of '0' and '1' that denotes top-level option selection)
 let agonyMode = false;     // savedata[4]      (Enables Agony Mode. This changes the function of 'Tie' into 'Coin Flip' and 'Undo' into 'Redo All')
 let coinFlips = 0;        // savedata[5]      (Only applicable in Agony Mode. Counts the number of coin flips that you did.)         
-let suboptStr = '';       // savedata[6...n]  (String of '0' and '1' that denotes nested option selection, separated by '|')
+let skipped = [];         // savedata[6]      (Array of characterDataToSort indexes that were marked as skipped)
+let suboptStr = '';       // savedata[7...n]  (String of '0' and '1' that denotes nested option selection, separated by '|')
 let timeError = false;    // Shifts entire savedata array to the right by 1 and adds an empty element at savedata[0] if true.
 
 /** Intermediate sorter data. */
@@ -35,6 +36,8 @@ let rightInnerIndex = 0;
 let battleNo        = 1;
 let sortedNo        = 0;
 let pointer         = 0;
+
+let lastSkipped     = false;
 
 /** A copy of intermediate sorter data is recorded for undo() purposes. */
 let sortedIndexListPrev = [];
@@ -95,6 +98,9 @@ function init() {
 
   document.querySelector('.left.sort.image').addEventListener('click', () => pick('left'));
   document.querySelector('.right.sort.image').addEventListener('click', () => pick('right'));
+  
+  document.querySelector('.left.sort.skip').addEventListener('click', () => pick('skipleft'));
+  document.querySelector('.right.sort.skip').addEventListener('click', () => pick('skipright'));
   
   document.querySelector('.sorting.tie.button').addEventListener('click', () => {if (agonyMode) pick('coinflip'); else pick('tie');});
   document.querySelector('.sorting.undo.button').addEventListener('click', () =>{ if (agonyMode) displayTips(); else undo(); });
@@ -400,6 +406,10 @@ function display() {
       case 2: pick('tie'); break;
       default: break;
     }
+  } else if (skipped.includes(leftCharIndex)) {
+    pick('right');
+  } else if (skipped.includes(rightCharIndex)) {
+    pick('left');
   } else { // Continue displaying in full
     progressBar(`Battle No. ${battleNo}`, percent);
 
@@ -413,7 +423,7 @@ function display() {
 /**
  * Sort between two character choices or tie.
  * 
- * @param {'left'|'right'|'tie'|'coinflip'} sortType
+ * @param {'left'|'right'|'skipleft'|'skipright'|'tie'|'coinflip'} sortType
  */
 function pick(sortType) {
   if ((timeTaken && choices.length === battleNo - 1) || loading) { return; }
@@ -431,6 +441,29 @@ function pick(sortType) {
   battleNoPrev        = battleNo;
   sortedNoPrev        = sortedNo;
   pointerPrev         = pointer;
+
+  /** 
+   * For picking 'skipleft' or 'skipright':
+   * 
+   * Add selected character to skipped list. Mark previous
+   * round as having skipped a character. And also picks
+   * the opposite character.
+   */
+  switch (sortType) {
+    case 'skipleft': {
+      skipped.push(sortedIndexList[leftIndex][leftInnerIndex]);
+      lastSkipped = true;
+      sortType = 'right';
+      break;
+    }
+    case 'skipright': {
+      skipped.push(sortedIndexList[rightIndex][rightInnerIndex]);
+      lastSkipped = true;
+      sortType = 'left';
+      break;
+    }
+    default: lastSkipped = false;
+  }
 
   /**
    * For picking 'coinflip'
@@ -632,6 +665,7 @@ function result(imageNum = 5) {
 
   characterDataToSort.forEach((val, idx) => {
     const characterIndex = finalSortedIndexes[idx];
+    if (skipped.includes(characterIndex)) return;
     const character = characterDataToSort[characterIndex];
     if (imageDisplay-- > 0) {
       resultTable.insertAdjacentHTML('beforeend', imgRes(character, rankNum, imageDisplay == 0));
@@ -686,6 +720,11 @@ function undo() {
   battleNo        = battleNoPrev;
   sortedNo        = sortedNoPrev;
   pointer         = pointerPrev;
+
+  if (lastSkipped) {
+    skipped.pop();
+    lastSkipped = false;
+  }
 
   display();
 }
@@ -777,7 +816,7 @@ function generateTextList() {
 }
 
 function generateSavedata() {
-  const saveData = `${timeError?'|':''}${timestamp}|${timeTaken}|${choices}|${agonyMode?'a':'b'}|${coinFlips}|${optStr}${suboptStr}`;
+  const saveData = `${timeError?'|':''}${timestamp}|${timeTaken}|${choices}|${agonyMode?'a':'b'}|${coinFlips}|${skipped.join(',')}|${optStr}${suboptStr}`;
   return LZString.compressToEncodedURIComponent(saveData);
 }
 
@@ -891,6 +930,8 @@ function decodeQuery(queryString = window.location.search.slice(1)) {
     if (agonyString != 'a') agonyMode = false;
 
     coinFlips = Number(decoded.splice(0, 1)[0]);
+
+    skipped = decoded.splice(0, 1)[0].split(',').map((elem) => Number(elem));
 
     const optDecoded    = decoded.splice(0, 1)[0];
     const suboptDecoded = decoded.slice(0);
