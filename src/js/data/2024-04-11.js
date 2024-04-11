@@ -3320,7 +3320,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Sextans Yulij",
-    img: "",
+    img: "https://i.imgur.com/fWifCjQ.png",
     opts: {
       series: [ "novel" ],
       rank: ["bronze"]
@@ -3328,7 +3328,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Coma Berenices Mei",
-    img: "",
+    img: "https://i.imgur.com/fWifCjQ.png",
     opts: {
       series: [ "novel" ],
       rank: ["filler"]
@@ -3336,7 +3336,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Typhon",
-    img: "",
+    img: "https://i.imgur.com/fWifCjQ.png",
     opts: {
       series: [ "novel" ],
       rank: ["god", "gigas"]
@@ -3344,7 +3344,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Enkelados",
-    img: "",
+    img: "https://i.imgur.com/fWifCjQ.png",
     opts: {
       series: [ "novel" ],
       rank: ["gigas"]
@@ -3352,7 +3352,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Altar Nicole",
-    img: "",
+    img: "https://i.imgur.com/fWifCjQ.png",
     opts: {
       series: [ "novel" ],
       rank: ["silver"]
@@ -3360,7 +3360,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Equidna",
-    img: "",
+    img: "https://i.imgur.com/fWifCjQ.png",
     opts: {
       series: [ "novel" ],
       rank: ["gigas"]
@@ -3368,7 +3368,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Agrios",
-    img: "",
+    img: "https://i.imgur.com/fWifCjQ.png",
     opts: {
       series: [ "novel" ],
       rank: ["gigas"]
@@ -3376,7 +3376,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Thoas",
-    img: "",
+    img: "https://i.imgur.com/fWifCjQ.png",
     opts: {
       series: [ "novel" ],
       rank: ["gigas"]
@@ -3384,7 +3384,7 @@ dataSet[dataSetVersion].characterData = [
   },
   {
     name: "Pallas [Gigantomachia]",
-    img: "",
+    img: "https://i.imgur.com/fWifCjQ.png",
     opts: {
       series: [ "novel" ],
       rank: ["gigas"]
