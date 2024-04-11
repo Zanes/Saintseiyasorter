@@ -41,7 +41,7 @@ dataSet[dataSetVersion].options = [
       { name: "Gold Saints", key: "gold" },
       { name: "Silver Saints", key: "silver" },
       { name: "Bronze Saints", key: "bronze" },
-      { name: "Filler/Indertemined/No Const.", key:"filler"},
+      { name: "Filler/Undefined/No Const.", key:"filler"},
       { name: "Gods/Representatives", tooptip:"aka Hades/Poseidon/Saori and even Pandora", key: "god"},  
       { name: "Marinas", key: "marina" },
       { name: "God Warriors", key: "gw"},
@@ -58,7 +58,7 @@ dataSet[dataSetVersion].options = [
       { name: "Jewels", key: "jewel"},
       { name: "Spirits", key: "spirit"},
       { name: "Hours", key: "hour"},
-      { name: "TLC Armies (Berserker/Taonia/Jaguar/Druids", key: "tlca"}
+      { name: "TLC Armies (Berserkers/Taonia/Jaguar/Druids)", key: "tlca"}
     ]
   },
   {
